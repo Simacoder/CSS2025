@@ -39,6 +39,18 @@ def normalize_filename(filename):
 #    name = name.replace("@", " ")
 #    print(name)
 
+    parts = name.split()
+    print(parts)
+
+    year = None
+    for part in parts:
+        if part.isdigit() and len(part) == 4:
+            year = part
+            print(f"Year found: {year}")
+            break
+    if not year:
+        print(f"Skipping: {filename} - no year")
+        return None
 
 # hardcore function call 
 normalize_filename("star_wars!1977&Lucas.avi")

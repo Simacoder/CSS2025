@@ -17,6 +17,7 @@ The Coding Summer School (CSS) is jointly organised by the Centre for High Perfo
 **We are all excited for you to join this landmark summer school!**
 
 Have a look below at all the different institutes involved:
+
 **Format**
 - Lectures & tutorials occur Monday to Friday
 - Lecture & tutorial times: 09:30 - 16:00 with breaks each day
@@ -24,7 +25,7 @@ Have a look below at all the different institutes involved:
 - Certificates awarded to qualifying students
 
 **Week 1*
-*Week 1 topics*:
+- *Week 1 topics*:
 
 - Data Science with Pandas
 
@@ -39,7 +40,7 @@ Have a look below at all the different institutes involved:
  
 
 **Week 2**
-*Week 2 topics*:
+- *Week 2 topics*:
 
 **Computational Thinking**
 
@@ -52,6 +53,7 @@ Have a look below at all the different institutes involved:
  
 
 # Coordinators
+
 - **CHPC**: Dr Werner Janse van Rensburg, Mr Binjamin Barsch, Dr Kevin Colville, Ms Nomlindelo Mfuphi
 
 - **NITheCS**: Prof Francesco Petruccione, Mrs René Kotzé, Dr. Thuthukile Khumalo, Mr Aluwani Guga
