@@ -18,6 +18,8 @@ The Coding Summer School (CSS) is jointly organised by the Centre for High Perfo
 
 Have a look below at all the different institutes involved:
 
+![screenshot](css2025/css2025.png)
+
 **Format**
 - Lectures & tutorials occur Monday to Friday
 - Lecture & tutorial times: 09:30 - 16:00 with breaks each day
