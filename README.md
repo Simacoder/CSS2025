@@ -18,7 +18,7 @@ The Coding Summer School (CSS) is jointly organised by the Centre for High Perfo
 
 Have a look below at all the different institutes involved:
 
-![image description](C:/Users/User/Desktop/Dirisa/CSS2025.css2025.png)
+css2025.png
 
 **Format**
 - Lectures & tutorials occur Monday to Friday
