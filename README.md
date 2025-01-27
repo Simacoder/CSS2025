@@ -24,7 +24,7 @@ Have a look below at all the different institutes involved:
 - Notes and exercises provided
 - Certificates awarded to qualifying students
 
-**Week 1*
+**Week 1**
 - *Week 1 topics*:
 
 - Data Science with Pandas
