@@ -44,7 +44,7 @@ def extract(file_path):
 
 # Call the function (create apps_data and reviews_data)
 apps_data = extract("data/apps_data.csv")
-review_data =extract("data/apps_data.csv")
+review_data =extract("data/review_data.csv")
 
 # Take a peek at one of the dataframe
 
@@ -63,3 +63,50 @@ print(apps_series)
 #subset_apps = apps_data
 subset_apps = apps_data[apps_series]
 print(subset_apps.head())
+
+reviews_series = review_data["App"].isin(subset_apps["App"])
+
+subset_reviews = review_data[reviews_series]
+
+aggregated_reviews = subset_reviews.groupby("App")["Sentiment_Polarity"].mean().reset_index()
+
+joined_apps_reviews = subset_apps.merge(aggregated_reviews, on = "App", how = "left")
+
+filtered_apps_reviews = joined_apps_reviews[["App", 'Rating', "Reviews", "Installs", "Sentiment_Polarity"]]
+
+print(filtered_apps_reviews.info())
+
+# using filtered_apps_reviews based  min-rating and min_reviews
+
+#apps_with_min_rating = 
+
+filtered_apps_reviews["Reviews"] = filtered_apps_reviews["Reviews"].astype(int)
+
+rating_series = filtered_apps_reviews["Reviews"] >= min_rating
+apps_with_min_rating = filtered_apps_reviews[rating_series]
+
+reviews_series = apps_with_min_rating["Reviews"] >= min_reviews
+top_apps = apps_with_min_rating[reviews_series]
+
+top_apps = top_apps.sort_values(by = ["Rating", "Reviews"], ascending = False).reset_index(drop=True)
+
+# Transorm function
+def transform(apps, reviews, category, min_rating, min_reviews):
+    # drop any duplicate from both dataframe
+    reviews = reviews.drop_duplicates()
+    apps = apps.drop_duplices(["App"])
+
+    # Find all of the apps and reviews in the food and drink category
+    subset_apps = app.loc[app["Category"] == category]
+
+    return top_apps
+
+
+# Call the function 
+top_apps_data = transform(
+    apps = apps_data,
+    reviews = reviews_data,
+    category = "FOOD_AND_DRINK",
+    min_rating = 4.0,
+    min_reviews = 1000
+)
